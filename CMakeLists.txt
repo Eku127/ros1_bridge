@@ -255,6 +255,20 @@ custom_executable(static_bridge_d455
 target_link_libraries(static_bridge_d455
   ${PROJECT_NAME})
 
+custom_executable(static_bridge_1_to_2
+  "src/static_bridge_1_to_2.cpp"
+  ROS1_DEPENDENCIES
+  TARGET_DEPENDENCIES ${ros2_interface_packages})
+target_link_libraries(static_bridge_1_to_2
+  ${PROJECT_NAME})
+
+custom_executable(static_bridge_2_to_1
+  "src/static_bridge_2_to_1.cpp"
+  ROS1_DEPENDENCIES
+  TARGET_DEPENDENCIES ${ros2_interface_packages})
+target_link_libraries(static_bridge_2_to_1
+  ${PROJECT_NAME})
+
 custom_executable(parameter_bridge
   "src/parameter_bridge.cpp"
   ROS1_DEPENDENCIES
